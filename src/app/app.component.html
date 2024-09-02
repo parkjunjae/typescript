@@ -5,7 +5,7 @@
     @for (user of users; track user.id) {
       <!-- <li *ngFor="let user of users"> -->
         <li>
-        <app-user [user]="user"
+        <app-user [user]="user" [selected]="user.id === selectedUserId"
         (select)="onSelectUser($event)"
         />
       </li>
@@ -14,10 +14,10 @@
   
   @if (selectedUser) { 
   <!-- <app-tasks *ngIf="selectedUser; else fallback" [name]="selectedUser!.name" /> -->
-  <app-tasks [name]="selectedUser.name" />
+  <app-tasks [userId]="selectedUser.id" [name]="selectedUser.name" />
   } @else {
   <!-- <ng-template #fallback> -->
-    <p id="fallback">선택해주세요</p>
+    <p id="fallback">select click user</p>
   <!-- </ng-template> -->
     }
 </main>

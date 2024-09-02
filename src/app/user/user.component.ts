@@ -1,16 +1,7 @@
 import { Component, computed, EventEmitter, INJECTOR, Input, Output } from '@angular/core';
 
-// type User = {
-//   id: string;
-//   avatar : string;
-//   name: string;
-// }
+import { type User } from './user.model';
 
-interface  User {
-  id: string;
-  avatar : string;
-  name: string;
-}
 @Component({
   selector: 'app-user',
   standalone: true,
@@ -23,6 +14,7 @@ export class UserComponent {
   // @Input({required: true}) name!: string;
 
   @Input({required : true}) user!: User;
+  @Input({required: true}) selected!: boolean;
   // avatar = input.required<string>();
   // name = input.required<string>();
    @Output () select = new EventEmitter<string>();

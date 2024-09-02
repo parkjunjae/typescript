@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { NgFor, NgIf } from '@angular/common';
 
 import { HeaderCompoenent } from './header/header.component';
 import { UserComponent } from './user/user.component';
@@ -10,7 +9,7 @@ import { TasksComponent } from './tasks/tasks.component';
   standalone: true,
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
-  imports: [HeaderCompoenent, UserComponent, TasksComponent, NgFor, NgIf]
+  imports: [HeaderCompoenent, UserComponent, TasksComponent]
 })
 export class AppComponent {
   users = DUMMY_USERS;
@@ -21,8 +20,6 @@ export class AppComponent {
   }
 
   onSelectUser(id: string) {
-
-    this.selectedUserId = id
     this.selectedUserId = id;
 
   }
