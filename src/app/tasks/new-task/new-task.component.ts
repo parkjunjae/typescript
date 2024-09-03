@@ -20,7 +20,7 @@ export class NewTaskComponent {
   private tasksService = inject(TasksService);
 
   onCancel(){
-    this.close.emit()
+    this.close.emit();
   }
 
   onSubmit() {
@@ -29,7 +29,7 @@ export class NewTaskComponent {
       summary: this.enteredSummary,
       date: this.enteredDate
     }, this.userId);
-    
+
     this.close.emit();
   }
 }
