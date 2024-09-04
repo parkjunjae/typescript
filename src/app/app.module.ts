@@ -17,8 +17,6 @@ import { tasksModule} from "./tasks/tasks.module";
         AppComponent, 
         HeaderCompoenent, 
         UserComponent, 
-        TaskComponent, 
-        NewTaskComponent
     ],
     bootstrap: [AppComponent],
     imports: [BrowserModule, FormsModule, sharedModule, tasksModule]
