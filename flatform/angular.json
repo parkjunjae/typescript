@@ -57,6 +57,9 @@
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "port": 5003
+          },
           "configurations": {
             "production": {
               "buildTarget": "cmp-deep-dive:build:production"
@@ -95,5 +98,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": false
   }
 }
