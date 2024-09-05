@@ -10,7 +10,8 @@
   </ul>
 
   @if (selectedUser) {
-    <app-tasks [userId]="selectedUser" [name]="selectedUser.name" />
+    <!--userId 에는 string 값이 들어기지 못한다. 그레서 selectedUser.id값을 바인딩 해야 한다.-->
+    <app-tasks [userId]="selectedUser.id" [name]="selectedUser.name" />
   } @else {
     <p id="fallback">Select a user to see their tasks!</p>
   }

@@ -59,6 +59,9 @@
         },
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "port": 5002
+          },
           "configurations": {
             "production": {
               "buildTarget": "debugging:build:production"
@@ -97,5 +100,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "c21ca7ba-a1a0-4d84-9371-a884b160a3f4"
   }
 }

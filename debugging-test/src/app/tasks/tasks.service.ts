@@ -45,7 +45,9 @@ export class TasksService {
   addTask(taskData: NewTaskData, userId: string) {
     this.tasks.unshift({
       id: new Date().getTime().toString(),
-      userId: '',
+      //userId 에 스트링 값으로 들어가면서 매칭이 제대로 안된다. userId 를 제대로 매칭 
+      //해주면 addTask 가 제대로 작동한다.
+      userId: userId,
       title: taskData.title,
       summary: taskData.summary,
       dueDate: taskData.date,
